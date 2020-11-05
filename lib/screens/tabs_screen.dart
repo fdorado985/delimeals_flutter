@@ -1,5 +1,6 @@
 import 'package:delimeals_flutter/screens/categories_screen.dart';
 import 'package:delimeals_flutter/screens/favorites_screen.dart';
+import 'package:delimeals_flutter/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -32,9 +33,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
-      drawer: Drawer(
-        child: Text('Hey nigga!'),
-      ),
+      drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
